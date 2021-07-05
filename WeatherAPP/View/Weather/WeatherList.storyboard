@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vy6-X6-92p">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather List View Controller-->
+        <scene sceneID="6fr-43-RHI">
+            <objects>
+                <viewController storyboardIdentifier="WeatherListViewController" id="vy6-X6-92p" customClass="WeatherListViewController" customModule="WeatherAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FBo-YM-RXL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-Ag-xIV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GCt-5e-5NE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vy6-X6-92p" id="L0C-Cv-P8b"/>
+                                    <outlet property="delegate" destination="vy6-X6-92p" id="9pD-4D-quO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X1v-zO-62t"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6mv-Ag-xIV" secondAttribute="bottom" id="Kgr-nf-4Bz"/>
+                            <constraint firstAttribute="bottom" secondItem="GCt-5e-5NE" secondAttribute="bottom" id="Pvb-lu-DtR"/>
+                            <constraint firstItem="GCt-5e-5NE" firstAttribute="leading" secondItem="X1v-zO-62t" secondAttribute="leading" id="RDU-7L-pFn"/>
+                            <constraint firstItem="6mv-Ag-xIV" firstAttribute="trailing" secondItem="X1v-zO-62t" secondAttribute="trailing" id="VL5-ZK-tPv"/>
+                            <constraint firstItem="6mv-Ag-xIV" firstAttribute="top" secondItem="FBo-YM-RXL" secondAttribute="top" id="Y1s-uJ-6fN"/>
+                            <constraint firstItem="6mv-Ag-xIV" firstAttribute="leading" secondItem="X1v-zO-62t" secondAttribute="leading" id="eY9-MP-1PP"/>
+                            <constraint firstItem="GCt-5e-5NE" firstAttribute="top" secondItem="FBo-YM-RXL" secondAttribute="top" id="hU3-Kx-cWW"/>
+                            <constraint firstItem="GCt-5e-5NE" firstAttribute="trailing" secondItem="X1v-zO-62t" secondAttribute="trailing" id="igT-1d-DPB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ms7-So-raW"/>
+                    <connections>
+                        <outlet property="tableView" destination="GCt-5e-5NE" id="IwH-sb-cRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWh-gI-pTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266.6666666666667" y="79.017857142857139"/>
+        </scene>
+    </scenes>
+</document>
